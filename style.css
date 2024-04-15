@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(54, 42, 42);
+    background-color: black;
+    font-family: "MedievalSharp", cursive;
+}
+
+.offcanvas {
+    background-color: black;
+    color: wheat;
+}
+
+.offcanvas button {
+    background-color: wheat;
+}
+
+.offcanvas-body,
+#calculadora,
+#productes article {
+    align-self: auto;
+    flex-wrap: wrap;
+}
+
+.offcanvas-body article {
+    width: 30%;
+    color: black;
+    text-align: center;
+}
+
+.offcanvas-body p:first-child {
+    height: 60px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    box-shadow: inset 2px 2px 10px;
+}
+
+.quantitat {
+    background-color: rgb(191, 191, 191);
+}
+
+.header {
+    flex-shrink: 0;
+}
+
+.header button{
+    position: absolute;
+    left: 5px;
+    background-image: url(img/copper1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 10%;
+    height: 5%;
+    color: black;
+    font-size: 1.2em;
+    box-shadow: rgb(106, 106, 106) 2px 2px 10px;
+}
+
+.container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/*----------- PRINCIPAL ------------*/
+
+#principal section {
+    width: 45%;
+}
+
+#principal {
+    justify-content: center;
+}
+
+#principal,
+#diners,
+#caniv {
+    height: 100%;
+}
+
+#principal section:first-child {
+    justify-content: space-between;
+}
+
+.card {
+    height: 50%;
+    background-image: url(img/paper.png);
+    background-size: cover;
+    box-sizing: border-box;
+    border-image: url(img/madera.png) 10;
+    border-style: solid;
+    border-width: 0 5px 0 5px;
+    font-weight: bold;
+}
+
+.card h3,
+h6 {
+    font-weight: bold;
+}
+
+.card-header {
+    background-image: url(img/madera.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: wheat;
+}
+
+.card-header h6 {
+    width: 50%;
+    font-size: 1.2em;
+}
+
+#comanda {
+    height: 60%;
+    overflow: scroll;
+    width: 100%;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    margin: 0;
+    scrollbar-color: rgb(136, 67, 43) wheat;
+    box-shadow: inset 10px 10px 20px rgb(104, 89, 89);
+}
+
+#comanda p {
+    width: 50%;
+    height: 15%;
+    border-bottom: 1px solid rgb(136, 67, 43);
+    padding: 2px;
+    background-color: wheat;
+}
+
+#calculadora {
+    height: 50%;
+    justify-content: center;
+    border-image: url(img/copper.jpg) 20;
+    border-style: solid;
+    border-width: 10px;
+    align-items: flex-start;
+    padding-top: 20px;
+    gap: 10px;
+    background-color: rgb(54, 42, 42);
+}
+
+#calculadoraPantalla {
+    width: 90%;
+    /*! eliminar al acabar */
+    background-color: rgb(183, 183, 183);
+    height: 15%;
+    font-family: "Kode Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    border: 2px solid rgb(54, 54, 54);
+}
+
+.calc, [value=borrar] {
+    width: 20%;
+    height: 10%;
+    font-size: 1.5em;
+    padding-bottom: 45px;
+}
+
+button {
+    box-shadow: rgb(60, 0, 0) 0 10px;
+    background-image: url(img/madera.png);
+    background-size: cover;
+    color: wheat;
+    font-weight: bold;
+    border: rgb(60, 0, 0) 2px solid;
+}
+
+button:active  {
+    box-shadow: inset rgb(60, 0, 0) 0 10px;
+}
+
+[value=Enter] {
+    width: 42%;
+}
+
+/* ---Productes ------*/
+#productes {
+    height: 100%;
+    justify-content: space-between;
+    color: wheat;
+}
+
+#productes article {
+    gap: 10px;
+    border: 2px solid brown;
+    padding: 10px;
+}
+
+#productes #menjar {
+    height: 50%;
+}
+
+#productes img {
+    width: 20%;
+    border-width: 5px;
+    border-style: solid;
+    border-image: url(img/copper.jpg) 6;
+}
+
+#productes p {
+    width: 0;
+    height: 50px;
+    position: relative;
+    z-index: 2;
+    left: -20%;
+    top: 15%;
+}
+
+#productes button {
+    height: 10%;
+    width: 100%;
+    font-size: 2em;
+}
+
+/*--------- DINERS ------ */
+#diners,
+#canvi {
+    color: wheat;
+    justify-content: space-between;
+}
+
+#diners .hstack {
+    justify-content: space-between;
+    height: 70%;
+    flex-wrap: wrap;
+}
+
+#diners .hstack article:first-child {
+    width: 65%;
+}
+
+#diners .hstack article:last-child {
+    width: 30%;
+}
+
+#diners .hstack article,
+#canvi article:not(#factura) {
+    border-image: url(img/copper.jpg) 10;
+    border-style: solid;
+    border-width: 10px;
+}
+
+#diners .hstack article {
+    border-image: url(img/copper.jpg) 10;
+    border-style: solid;
+    border-width: 10px;
+    height: 100%;
+    justify-content: space-around;
+}
+
+#diners img {
+    width: 45%;
+}
+
+.moneda {
+    max-width: 30%;
+}
+
+#diners button,
+#canvi button {
+    height: 10%;
+    font-size: 2.5em;
+    width: 100%;
+}
+
+/*---------- CANVI -------- */
+#canvi {
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    align-content: space-between;
+    position: relative;
+}
+
+#canvi #monedes img {
+    max-width: 20%;
+    min-width: 15%;
+}
+
+#canvi article {
+    width: 60%;
+}
+
+#canvi #monedes {
+    height: 60%;
+}
+
+#canvi #factura {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40%;
+    flex-wrap: wrap;
+    text-align: center;
+    height: 80%;
+    color: black;
+    font-weight: bold;
+    justify-content: center;
+    align-content: center
+}
+
+#factura img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+#factura div {
+    border-top: 2px solid black;
+    padding: 20px;
+    width: 80%;
+    flex-wrap: wrap;
+}
+
+#factura #comandes {
+    max-height: 50%;
+    overflow-y: scroll;
+    box-sizing: border-box;
+}
+
+#factura #comandes p {
+    width: 50%;
+    padding: 0 !important;
+}
+
+#factura #preus {
+    max-height: 20%;
+}
+
+#factura #preus h3 {
+    font-size: 1em;
+}
+
+#comandes .p2 {
+    padding: 0;
+}
+
+#factura h2,
+h5 {
+    width: 100%;
+}
+
+#canvi button {
+    width: 100%;
+}
+
+
+/*----- millores futures ----*/
+/*
+@media only screen and (max-width: 600px) {
+    body {
+        height: 100%;
+    }
+
+    #principal {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    #principal section {
+        width: 100%;
+        height: 100%;
+    }
+
+    #calculadora {
+        height: 50%;
+    }
+
+    .card {
+        width: 100%;
+        height: 50%;
+    }
+
+    .calc {
+        padding-bottom: 5px;
+    }
+
+    #productes {
+        display: none;
+    }
+
+}
+*/

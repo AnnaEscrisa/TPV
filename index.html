@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js"></script>
+    <title>TPV</title>
+</head>
+
+<body>
+    <section class="container header">
+        <button type="button" value="caixa" dtype="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Mostrar caixa
+        </button>
+    </section>
+
+    <section class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+        aria-labelledby="offcanvasWithBothOptionsLabel">
+        <section class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Caixa</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </section>
+        <section class="offcanvas-body hstack gap-3">
+            <article class="p-2">
+                <p style="background-image: url(img/diners/cinquanta.png)"></p>
+                <p class="quantitat" data-diners=0>1</p>
+            </article>
+            <article class="p-2">
+                <p style="background-image: url(img/diners/vint.png)"></p>
+                <p class="quantitat" data-diners=1>5</p>
+            </article>
+            <article class="p-2">
+                <p style="background-image: url(img/diners/deu.png)"></p>
+                <p class="quantitat" data-diners=2>10</p>
+            </article>
+            <article class="p-2">
+                <p style="background-image: url(img/diners/cinc.png)"></p>
+                <p class="quantitat" data-diners=3>15</p>
+            </article>
+            <article class="p-2">
+                <p style="background-image: url(img/diners/dos.png)"></p>
+                <p class="quantitat" data-diners=4>15</p>
+            </article>
+            <article class="p-2">
+                <p style="background-image: url(img/diners/un.png)"></p>
+                <p class="quantitat" data-diners=5>15</p>
+            </article>
+            <article class="p-2">
+                <p style="background-image: url(img/diners/cinquanta_cents.png)"></p>
+                <p class="quantitat" data-diners=6>15</p>
+            </article>
+            <article class="p-2">
+                <p style="background-image: url(img/diners/vint_cents.png)"></p>
+                <p class="quantitat" data-diners=7>15</p>
+            </article>
+            <article class="p-2">
+                <p style="background-image: url(img/diners/deu_cents.png)"></p>
+                <p class="quantitat" data-diners=8>15</p>
+            </article>
+            <article class="p-2">
+                <p style="background-image: url(img/diners/cinc_cents.png)"></p>
+                <p class="quantitat" data-diners=9>10</p>
+            </article>
+            <article class="p-2">
+                <p style="background-image: url(img/diners/dos_cents.png)"></p>
+                <p class="quantitat" data-diners=9>10</p>
+            </article>
+            <article class="p-2">
+                <p style="background-image: url(img/diners/un_cents.png)"></p>
+                <p class="quantitat" data-diners=10>10</p>
+            </article>
+        </section>
+    </section>
+
+    <!-- !ALERTA conforme añades productos, se hace grande la seccion. MAL -->
+    <section id="principal" class="container hstack gap-3">
+        <section class="p-2 vstack gap-2">
+            <article class="card">
+                <div class="card-header hstack">
+                    <h6>Producte</h6>
+                    <h6>Preu</h6>
+                </div>
+                <div id="comanda" class="card-body hstack"></div>
+                <h3 id="preu" class="card-footer">Subtotal: </h3>
+            </article>
+            <article id="calculadora" class="hstack">
+                <h3 id="calculadoraPantalla">&nbsp;</h3>
+                <button type="button" class="calc">9</button>
+                <button type="button" class="calc">8</button>
+                <button type="button" class="calc">7</button>
+                <button type="button" class="calc">0</button>
+                <button type="button" class="calc">6</button>
+                <button type="button" class="calc">5</button>
+                <button type="button" class="calc">4</button>
+                <button type="button" class="calc">+</button>
+                <button type="button" class="calc">3</button>
+                <button type="button" class="calc">2</button>
+                <button type="button" class="calc">1</button>
+                <button type="button" class="calc">-</button>
+                <button type="button" class="calc" value="Enter">Enter</button>
+                <button type="button" value="borrar">←</button>
+                <button type="button" class="calc">.</button>
+            </article>
+        </section>
+
+        <section id="productes" class="p-2 vstack">
+            <article id="begudes" class="hstack">
+            </article>
+            <article id="menjar" class="hstack">
+            </article>
+            <button type="button" value="cobrar">Cobrar</button>
+        </section>
+    </section>
+
+    <section id="diners" class="container vstack" hidden>
+        <article class="p-2 hstack">
+            <article class="hstack">
+                <img src="img/diners/cinquanta.png" class="bitllets" id="0">
+                <img src="img/diners/vint.png" class="bitllets" id="1">
+                <img src="img/diners/deu.png" class="bitllets" id="2">
+                <img src="img/diners/cinc.png" class="bitllets" id="3">
+            </article>
+            <article class="hstack">
+                <img src="img/diners/dos.png" class="bitllets moneda" id="4">
+                <img src="img/diners/un.png" class="bitllets moneda" id="5">
+                <img src="img/diners/cinquanta_cents.png" class="bitllets moneda" id="6">
+                <img src="img/diners/vint_cents.png" class="bitllets moneda" id="7">
+                <img src="img/diners/deu_cents.png" class="bitllets moneda" id="8">
+                <img src="img/diners/cinc_cents.png" class="bitllets moneda" id="9">
+                <img src="img/diners/dos_cents.png" class="bitllets moneda" id="10">
+                <img src="img/diners/un_cents.png" class="bitllets moneda" id="11">
+            </article>
+        </article>
+        <article>
+            <h3></h3>
+            <h3 id="dinersDonats"></h3>
+        </article>
+        <button type="button" value="canvi">Canvi</button>
+    </section>
+
+    <section id="canvi" class="container hstack" hidden>
+        <article id="resultats">
+            <h3 id="import"></h3>
+            <h3 id="pagat"></h3>
+            <h3 id="quantitatCanvi"></h3>
+        </article>
+        <article id="factura" class="hstack">
+            <img src="img/pergami.png" alt="pergami">
+            <h2>Factura</h2>
+            <div id="comandes" class="hstack"></div>
+            <div id="preus">
+            </div>
+        </article>
+        <article id="monedes">
+        </article>
+        <button type="button" value="novaComanda">Nova Comanda</button>
+    </section>
+
+
+</body>
+
+</html>
